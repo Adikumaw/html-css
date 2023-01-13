@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Monoton&family=Roboto:ital,wght@0,100;0,300;0,400;1,100&family=Yeseva+One&display=swap");
+
+:root {
+  font-size: 18px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: hsl(32, 65%, 92%);
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  color: #555;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  border-radius: 10px;
+  box-shadow: 10px 10px 80px 10px rgba(0, 0, 0, 0.25);
+  max-width: 550px;
+  /* min-height: 27rem; */
+  display: flex;
+  overflow: hidden;
+  margin: 2rem;
+}
+/* ---- I M A G E   C O N T A I N E R ----- */
+.image {
+  flex: 0 0 50%;
+}
+.image img {
+  width: 100%;
+  height: 100%;
+  /* border-radius: 10px 0 0 10px; */
+}
+/* ---- T E X T   C O N T A I N E R ----- */
+.text__container {
+  flex: 1;
+  background-color: hsl(38, 17%, 91%);
+}
+.inner__container {
+  padding: 1.77rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/* ------------ PREVUEW -------------- */
+h2 {
+  letter-spacing: 0.277rem;
+  font-size: 0.66rem;
+  text-transform: uppercase;
+}
+/* ------------- HEADING AND CONTENT------------ */
+h1 {
+  font-family: "Yeseva One", sans-serif;
+  color: black;
+  font-size: 1.55rem;
+  line-height: 1.66rem;
+}
+p {
+  font-size: 0.77rem;
+  line-height: 1.22rem;
+}
+.price {
+  display: flex;
+  align-items: center;
+}
+span {
+  font-family: "Yeseva One", sans-serif;
+  color: hsl(158, 36%, 37%);
+  font-size: 1.66rem;
+}
+.price p {
+  margin-left: 1.11rem;
+  text-decoration: line-through;
+}
+
+/* -------------BUTTON -------------- */
+.button_box {
+  flex: 0 0 12%;
+  background-color: hsl(158, 36%, 37%);
+  border-radius: 10px;
+  font-size: 0.88rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: background-color 100ms;
+}
+.button {
+  color: white;
+  /* important function ------------------- */
+  /* filter: brightness(100%) !important; */
+  text-decoration: none;
+}
+.button ion-icon {
+  vertical-align: middle;
+  margin: 5px 6px 6px 0;
+}
+.button_box:hover {
+  background-color: hsl(158, 36%, 30%);
+}
+
+/* ---------- FOOTER SECTION ------------ */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  text-decoration: none;
+  color: hsl(228, 45%, 44%);
+}
+.second::after,
+.first::after {
+  position: absolute;
+  content: ".";
+  color: white;
+  background-color: hsl(228, 45%, 44%);
+  transform: skew(10deg);
+  transform: translate(-45px, 13px);
+  height: 0.8px;
+  width: 0;
+  transition: width 0.85s, transform 0.85s;
+}
+.second:hover.second::after,
+.first:hover.first::after {
+  transform: translate(-83.4px, 13px);
+  width: 82.5px;
+}
+.second:hover.second::after {
+  transform: translate(-81.5px, 13px);
+}
+
+/* landscape fixes----------------- */
+@media only screen and (max-width: 589px) {
+  :root {
+    font-size: 17px;
+  }
+}
+@media only screen and (max-width: 559px) {
+  :root {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  :root {
+    font-size: 15px;
+  }
+}
+
+/* ------- desktop SCREEN FIXES ----------- */
+@media only screen and (max-height: 430px) {
+  :root {
+    font-size: 14px !important;
+  }
+  .inner__container {
+    padding: 1rem !important;
+  }
+  .container {
+    height: 20rem;
+    min-height: 20rem;
+  }
+}
+@media only screen and (max-height: 370px) {
+  :root {
+    font-size: 13.5px !important;
+  }
+  .inner__container {
+    padding: 0.85rem !important;
+  }
+  .container {
+    height: 18rem;
+    max-width: 30rem !important;
+  }
+}
+@media only screen and (max-width: 490px) and (max-height: 720px) {
+  :root {
+    font-size: 18px !important;
+  }
+  .image {
+    max-height: 10rem !important;
+  }
+  .container {
+    min-height: 27rem;
+  }
+  .container .text__container {
+    min-height: 17rem !important;
+  }
+  .inner__container {
+    height: 17rem !important;
+  }
+}
+
+/* ------- MOBILE SCREEN FIXES ----------- */
+@media only screen and (max-width: 490px) {
+  :root {
+    font-size: 20px;
+  }
+  .container {
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  /* ---- I M A G E   C O N T A I N E R ----- */
+  .image {
+    max-height: 15rem;
+  }
+  .image img {
+    object-position: center;
+    object-fit: cover;
+  }
+  /* ---- T E X T   C O N T A I N E R ----- */
+  .container .text__container {
+    min-height: 20rem;
+  }
+  .inner__container {
+    padding: 1.5rem;
+    height: 20rem;
+  }
+}
+@media only screen and (max-width: 440px) {
+  :root {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 390px) {
+  :root {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 299px) {
+  :root {
+    font-size: 14px;
+  }
+}
