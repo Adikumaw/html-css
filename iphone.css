@@ -1,0 +1,61 @@
+:root{
+    font-size: 16px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: beige;
+    display: grid;
+    place-items: center;
+}
+.iphonebox{
+    position: relative;
+    width:20rem;
+    height:30rem;
+    background-color: rgb(255, 255, 255);
+   transform: rotate(-45deg) skew(30deg, 30deg);
+   background-image: url(app-iPhone.png);
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center;
+   box-shadow: -14rem 15rem .6rem .6rem rgba(0, 0, 0, 0.701);
+   transition: transform 2s , box-shadow 2s;
+}
+.iphonebox::before,
+.iphonebox::after{content:"";}
+.iphonebox::before{
+    position: absolute;
+    left: -9rem;
+    top: 4.68rem;
+    height: 100%;
+    width: 9rem;
+    background-color: rgb(238, 238, 238);
+    transform: skewY(-46deg);
+}
+.iphonebox::after{
+    position: absolute;
+    bottom: -9.31rem;
+    left: -4.5rem;
+    height: 9.35rem;
+    width: 100%;
+    background-color: rgb(135, 135, 135);
+    transform: skewX(-44deg);
+}
+.iphonebox:hover{
+    transform: rotate(-45deg) skew(30deg, 30deg) translate(2rem, -4rem);
+    box-shadow: -16rem 17rem 1.25rem .625rem rgba(0, 0, 0, 0.398);
+}
+@media only screen and (max-width: 375px){
+    :root{
+        font-size: 6px;
+    }
+    .iphonebox:focus{
+        transform: rotate(-45deg) skew(30deg, 30deg) translate(2rem, -4rem);
+        box-shadow: -16rem 17rem 1.25rem .625rem rgba(0, 0, 0, 0.398);
+    }
+}
